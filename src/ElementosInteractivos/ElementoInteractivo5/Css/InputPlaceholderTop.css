@@ -1,0 +1,35 @@
+.inputPlaceholderTop .input{
+    font-size: 15px;
+    margin: 20px;
+
+    /* No cambiar */
+    position: relative;
+}
+.inputPlaceholderTop .input .placeholderExterno{
+    font-weight: bold;
+    border-top: 1px solid gray;
+    padding: 5px;
+    left: 5px;
+    
+    /* No cambiar */
+    position: absolute;
+    /* Solo cambiar si cambia el "top" de la animación */
+    top: -20px;
+}
+.inputPlaceholderTop .input .placeholderExterno, .inputPlaceholderTop .input input{
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+.inputPlaceholderTop .input input{
+    padding: 10px;
+    border: 1px solid gray;
+
+    /* Cambiar solo si cambian los ms del  duration*/
+    transition: 0.3s;
+}
+.inputPlaceholderTop .input input:focus{
+    outline: none;
+    -webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);
+}

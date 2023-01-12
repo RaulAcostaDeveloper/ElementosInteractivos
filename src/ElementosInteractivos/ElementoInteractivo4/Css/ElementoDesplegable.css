@@ -1,0 +1,19 @@
+.elementoDesplegable {
+    /* No editable */
+    width: 100%;
+    margin-bottom: 50px;
+}
+.elementoDesplegable .titulo{
+    /* Editable */
+    font-weight: bold;
+    font-size: 20px;
+    text-align: left;
+
+    /* No Editable */
+    cursor: pointer;
+}
+.elementoDesplegable .titulo img{
+    /* Editable */
+    width: 14px;
+    margin-right: 15px;
+}

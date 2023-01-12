@@ -1,0 +1,36 @@
+.carrucel{
+    /* Se puede cambiar */
+    width: 350px;
+    height: 200px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carrucel{
+    /* No cambiar */
+    overflow: hidden;
+    position: relative;
+}
+.carrucel img{
+    /* No cambiar */
+    width: 100%;
+    position: absolute;
+    transition: 0.5s;
+}
+
+@keyframes aparecerImagen {
+    0% {
+      visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+}

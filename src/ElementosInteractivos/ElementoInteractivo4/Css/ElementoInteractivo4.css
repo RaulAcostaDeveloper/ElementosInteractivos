@@ -1,0 +1,7 @@
+.ElementoInteractivo4 .centrar{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.ElementoInteractivo4 .centrar .contenidoInterno img{
+    width: 200px;
+}

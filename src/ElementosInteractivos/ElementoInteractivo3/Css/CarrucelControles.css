@@ -1,0 +1,51 @@
+.carrucelControles{
+    /* Se puede cambiar */
+    width: 450px;
+    height: 200px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carrucelControles{
+    /* No cambiar */
+    overflow: hidden;
+    position: relative;
+}
+.carrucelControles .imgEnCarrucel{
+    /* No cambiar */
+    width: 100%;
+    position: absolute;
+    transition: 0.5s;
+}
+.carrucelControles .leftButton, .carrucelControles .rightButton{
+    /* Se puede cambiar */
+    width: 50px;
+    background-color: transparent;
+    border: none;
+    
+    /* No cambiar */
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    cursor: pointer;
+}
+.carrucelControles .leftButton{
+    /* No cambiar */
+    left: 0;
+}
+.carrucelControles .rightButton{
+    /* No cambiar */
+    right: 0;
+}
+.carrucelControles .leftButton img, .carrucelControles .rightButton img{
+    /* No cambiar */
+    width: 100%;
+}

@@ -1,45 +1,46 @@
 import { useEffect, useState } from 'react';
 import './Css/CarrucelControles.css';
-const CarrucelControles = ({milisegundosIntervalo, srcImagenes})=>{
-    const [imagenesOrdenadas, setImagenesOrdenadas] = useState([]);
 
-    // Invertir el arreglo... reverse() no funciona
+// OPCIONES
+// srcImagenes, arreglo con objetos [{src:'./ruta.jpg', title:'titulo imagen'},]
+// relacionAspecto, puede ser carrucelControlesAncho, carrucelControlesAlto, carrucelControlesCuadrado
+const CarrucelControles = ({srcImagenes, relacionAspecto = 'carrucelControlesAncho'})=>{
+    const [arregloActual, setArregloActual] = useState([]);
+
+    // Invertir el arreglo para que se muestre la primera
     useEffect(()=>{
-        let arrTemp = [];
-        srcImagenes.forEach(element => {
-            arrTemp.unshift(element);
-        });
-        setImagenesOrdenadas(arrTemp);
+        setArregloActual(srcImagenes.map((el)=>el));
     },[srcImagenes]);
 
-
     const imagenAnterior = ()=> {
-        let arrTemp = imagenesOrdenadas.map((el)=>el);
-        for (let index = 0; index < arrTemp.length; index++) {
-            if (index === arrTemp.length-1) {
-                arrTemp[index] = imagenesOrdenadas[0];
-            } else {
-                arrTemp[index] = imagenesOrdenadas[index+1];
-            }
-        }
-        setImagenesOrdenadas(arrTemp);
-    }
-    const imagenPosterior = () =>{
-        let arrTemp = imagenesOrdenadas.map((el)=>el);
+        let arrTemp = arregloActual.map((el)=>el);
         for (let index = 0; index < arrTemp.length; index++) {
             if (index === 0) {
-                arrTemp[index] = imagenesOrdenadas[arrTemp.length-1];
+                arrTemp[index] = arregloActual[arrTemp.length-1];
             } else {
-                arrTemp[index] = imagenesOrdenadas[index-1];
+                arrTemp[index] = arregloActual[index-1];
             }
         }
-        setImagenesOrdenadas(arrTemp);
+        setArregloActual(arrTemp)
     }
+
+    const imagenPosterior = () =>{
+        let arrTemp = arregloActual.map((el)=>el);
+        for (let index = 0; index < arrTemp.length; index++) {
+            if (index === arrTemp.length-1) {
+                arrTemp[index] = arregloActual[0];
+            } else {
+                arrTemp[index] = arregloActual[index+1];
+            }
+        }
+        setArregloActual(arrTemp);
+    }
+    
     return (
-        <div className='carrucelControles'>
-            { imagenesOrdenadas.map( (img) => 
-                    <img className='imgEnCarrucel' src={img.src} key={img.src} alt={img.title} />
-            )}
+        <div className={'carrucelControles ' + relacionAspecto}>
+            { arregloActual.length > 0 &&
+                <img className='imgEnCarrucel' src={arregloActual[0].src} alt={arregloActual[0].title} />
+            }
             <button className='leftButton' onClick={()=>imagenAnterior()}>
                 <img src='./left-arrow.png' alt='Left button'/>
             </button>            

@@ -6,8 +6,6 @@ import InputPlaceholderTop from './InputPlaceholderTop';
 const ElementoInteractivo5 = ({titulo, explicacion})=>{
     const [miValor, setMiValor] = useState('');
     const [miOtroValor, setMiOtroValor] = useState('');
-
-    console.log(miValor);
     return (
         <div className="elementoInteractivo ElementoInteractivo5">
             <div className='titulo'>

@@ -34,11 +34,11 @@ const ElementoInteractivo2 = ({titulo, explicacion})=>{
                 {explicacion}
             </div>
             <div className='centrar'>
-                {/*opciones carrucelAlto, carrucelAncho o carrucelCuadrado */}
+                {/*opciones ancho, alto, cuadrado */}
                 <Carrucel 
                     milisegundosIntervalo={3000}
                     srcImagenes={ arregloImagenes }
-                    relacionAspecto='carrucelAncho'
+                    relacionAspecto='ancho'
                 />
             </div>
         </div>

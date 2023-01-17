@@ -18,10 +18,10 @@ function App() {
             explicacion={'Imagen (o contenido) que al dar click "sale" para revelar otro elemento. De nuevo click para ocultar el elemento. También mantén presionado y libera al terminar la animación para regresar a su posición original.'}/>
         </Article>
         <Article>
-          <ElementoInteractivo2 titulo={'Carrucel automático'} explicacion={'Carrucel de imágenes que pasan en un intervalo de tiempo. Las imágenes se ajustan al ancho del elemento.'}/>
+          <ElementoInteractivo2 titulo={'Carrucel automático'} explicacion={'Carrucel de imágenes que pasan en un intervalo de tiempo. Opciones ancho, alto y cuadrado.'}/>
         </Article>
         <Article>
-          <ElementoInteractivo3  titulo={'Carrucel con controles'} explicacion={'Usa las flechas para navegar entre imágenes.'}/>
+          <ElementoInteractivo3  titulo={'Carrucel con controles'} explicacion={'Usa las flechas para navegar entre imágenes. Opciones ancho, alto y cuadrado.'}/>
         </Article>
         <Article>
           <ElementoInteractivo4  titulo={'Contenido desplegable'} explicacion={'Da click en el título para revelar el contenido.'}/>

@@ -29,7 +29,7 @@ const Carrucel = ({milisegundosIntervalo=1000, srcImagenes, relacionAspecto = 'c
     },[arregloActual, milisegundosIntervalo]);
 
     return (
-        <div className={relacionAspecto}>
+        <div className={'Carrucel ' + relacionAspecto}>
             { arregloActual.length > 0 &&
                 <img className='imgEnCarrucel' src={arregloActual[0].src} alt={arregloActual[0].title} />
             }

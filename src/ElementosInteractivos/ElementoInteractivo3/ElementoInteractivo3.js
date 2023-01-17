@@ -33,10 +33,10 @@ const ElementoInteractivo3 = ({titulo, explicacion})=>{
                 {explicacion}
             </div>
             <div className='centrar'>
-                {/*opciones carrucelControlesAlto, carrucelControlesAncho o carrucelControlesCuadrado */}
+                {/*opciones ancho, alto, cuadrado */}
                 <CarrucelControles
                     srcImagenes={ arregloImagenes }
-                    relacionAspecto='carrucelControlesCuadrado'
+                    relacionAspecto='ancho'
                 />
             </div>
         </div>
